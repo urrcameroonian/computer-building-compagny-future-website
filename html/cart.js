@@ -32,12 +32,25 @@ document.getElementById('add-to-cart').addEventListener('click', function() {
     const cpuId = document.getElementById('cpu-select').value;
     const gpuId = document.getElementById('gpu-select').value;
     const ramId = document.getElementById('ram-select').value;
+    const storageId = document.getElementById('storage-select').value;
+    const cpuCoolerId = document.getElementById('cpu-cooler-select').value;
+    const motherboardId = document.getElementById('motherboard-select').value;
+    const caseId = document.getElementById('case-select').value;
+    const powerSupplyId = document.getElementById('power-supply-select').value;
+    const osId = document.getElementById('os-select').value;
 
-    if (cpuId && gpuId && ramId) {
+    if (cpuId && gpuId && ramId && storageId && cpuCoolerId && motherboardId && caseId && powerSupplyId) {
         addToCart(cpuId, 'cpu');
         addToCart(gpuId, 'gpu');
         addToCart(ramId, 'ram');
+        addToCart(storageId, 'storage');
+        addToCart(cpuCoolerId, 'cpuCooler');
+        addToCart(motherboardId, 'motherboard');
+        addToCart(caseId, 'case');
+        addToCart(powerSupplyId, 'powerSupply');
+        if (osId) addToCart(osId, 'os'); // OS is optional
     } else {
-        alert('Please select all parts before adding to cart.');
+        alert('Please select all required parts before adding to cart.');
     }
 });
+
