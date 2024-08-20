@@ -10,7 +10,8 @@
 <body>
     <!-- Header -->
     <header>
-        <h1>PC Builder</h1>
+        <h1 class="neon-text">Build Your Dream PC</h1>
+        <p class="animated-text">Select your parts and customize your PC</p>
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
@@ -31,29 +32,54 @@
 
         <!-- HTML Section for Part Selection -->
 
- <select id="cpu-select"></select>
- <select id="gpu-select"></select>
- <select id="ram-select"></select>
- <select id="storage-select"></select>
- <select id="cpu-cooler-select"></select>
- <select id="motherboard-select"></select>
- <select id="case-select"></select>
- <select id="power-supply-select"></select> 
- <select id="os-select">
-    <option value="">Select OS (Optional)</option>
- </select>
+       <!-- Part Selection Section -->
+<div class="part-category">
+    <label for="cpu-select">CPU:</label>
+    <select id="cpu-select" class="neon-select"></select>
+</div>
+<div class="part-category">
+    <label for="gpu-select">GPU:</label>
+    <select id="gpu-select" class="neon-select"></select>
+</div>
+<div class="part-category">
+    <label for="ram-select">RAM:</label>
+    <select id="ram-select" class="neon-select"></select>
+</div>
+<div class="part-category">
+    <label for="storage-select">Storage:</label>
+    <select id="storage-select" class="neon-select"></select>
+</div>
+<div class="part-category">
+    <label for="cpu-cooler-select">CPU Cooler:</label>
+    <select id="cpu-cooler-select" class="neon-select"></select>
+</div>
+<div class="part-category">
+    <label for="motherboard-select">Motherboard:</label>
+    <select id="motherboard-select" class="neon-select"></select>
+</div>
+<div class="part-category">
+    <label for="case-select">Case:</label>
+    <select id="case-select" class="neon-select"></select>
+</div>
+<div class="part-category">
+    <label for="power-supply-select">Power Supply:</label>
+    <select id="power-supply-select" class="neon-select"></select>
+</div>
+<div class="part-category">
+    <label for="os-select">Operating System (Optional):</label>
+    <select id="os-select" class="neon-select"></select>
+</div>
+<button id="add-to-cart" class="neon-button">Add to Cart</button>
 
- <button id="add-to-cart">Add to Cart</button>
 
 <!-- Cart Section -->
 <section id="cart">
-    <h2>Your Cart</h2>
-    <ul id="cart-list">
-        <!-- Cart items will be displayed here -->
-    </ul>
-    <p id="total-price">Total: $0</p>
-    <button id="checkout-button">Checkout</button>
+    <h2 class="neon-text">Your Cart</h2>
+    <ul id="cart-list"></ul>
+    <p id="total-price" class="neon-text">Total: $0</p>
+    <button id="checkout-button" class="neon-button">Checkout</button>
 </section>
+</main>
 
     </main>
 
@@ -69,15 +95,6 @@
     <script src="order.js"></script>
 
 
-    <!-- Cart Section -->
-<section id="cart">
-    <h2>Your Cart</h2>
-    <ul id="cart-list">
-        <!-- Cart items will be displayed here -->
-    </ul>
-    <p id="total-price">Total: $0</p>
-    <button id="checkout-button">Checkout</button>
-</section>
-
+  
 </body>
 </html>

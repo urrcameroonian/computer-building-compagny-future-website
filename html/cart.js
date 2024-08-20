@@ -5,7 +5,16 @@ const cart = [];
 function addToCart(productId, category) {
     const product = products[category].find(p => p.id === parseInt(productId));
     cart.push(product);
+    animateCartAddition();
     updateCartDisplay();
+}
+
+function animateCartAddition() {
+    const cartSection = document.getElementById("cart");
+    cartSection.style.transform = "scale(1.05)";
+    setTimeout(() => {
+        cartSection.style.transform = "scale(1)";
+    }, 150);
 }
 
 function updateCartDisplay() {
@@ -16,6 +25,7 @@ function updateCartDisplay() {
         listItem.textContent = `${item.name} - $${item.price}`;
         const removeButton = document.createElement("button");
         removeButton.textContent = "Remove";
+        removeButton.classList.add("neon-button");
         removeButton.addEventListener("click", () => {
             cart.splice(index, 1);
             updateCartDisplay();
@@ -28,6 +38,7 @@ function updateCartDisplay() {
     document.getElementById("total-price").textContent = `Total: $${totalPrice}`;
 }
 
+// Handle Add to Cart Button
 document.getElementById('add-to-cart').addEventListener('click', function() {
     const cpuId = document.getElementById('cpu-select').value;
     const gpuId = document.getElementById('gpu-select').value;
@@ -53,4 +64,3 @@ document.getElementById('add-to-cart').addEventListener('click', function() {
         alert('Please select all required parts before adding to cart.');
     }
 });
-
