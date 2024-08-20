@@ -35,15 +35,19 @@
        <!-- Part Selection Section -->
 <div class="part-category">
     <label for="cpu-select">CPU:</label>
-    <select id="cpu-select" class="neon-select"></select>
+    <select id="cpu-select" class="neon-select" onchange="filterParts('cpu')"></select>
 </div>
 <div class="part-category">
-    <label for="gpu-select">GPU:</label>
-    <select id="gpu-select" class="neon-select"></select>
+    <label for="motherboard-select">Motherboard:</label>
+    <select id="motherboard-select" class="neon-select" onchange="filterParts('motherboard')"></select>
 </div>
 <div class="part-category">
     <label for="ram-select">RAM:</label>
     <select id="ram-select" class="neon-select"></select>
+</div>
+<div class="part-category">
+    <label for="gpu-select">GPU:</label>
+    <select id="gpu-select" class="neon-select"></select>
 </div>
 <div class="part-category">
     <label for="storage-select">Storage:</label>
@@ -52,10 +56,6 @@
 <div class="part-category">
     <label for="cpu-cooler-select">CPU Cooler:</label>
     <select id="cpu-cooler-select" class="neon-select"></select>
-</div>
-<div class="part-category">
-    <label for="motherboard-select">Motherboard:</label>
-    <select id="motherboard-select" class="neon-select"></select>
 </div>
 <div class="part-category">
     <label for="case-select">Case:</label>
@@ -69,7 +69,15 @@
     <label for="os-select">Operating System (Optional):</label>
     <select id="os-select" class="neon-select"></select>
 </div>
+
+<!-- Compatibility Chart Section -->
+<div id="compatibility-chart" class="compatibility-chart">
+    <!-- Compatibility results will be displayed here -->
+</div>
+
+<!-- Add to Cart Button -->
 <button id="add-to-cart" class="neon-button">Add to Cart</button>
+
 
 
 <!-- Cart Section -->
