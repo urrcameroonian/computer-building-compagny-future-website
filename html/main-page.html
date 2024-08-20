@@ -29,42 +29,32 @@
             <p>Build your dream PC by selecting the best parts that suit your needs. We’ll assemble and deliver it right to your door!</p>
         </section>
 
-        <!-- PC Parts Selection Section -->
-        <section id="build">
-            <h2>Select Your Parts</h2>
-            <div class="part-selection">
-                <!-- CPU Selection -->
-                <div class="part-category">
-                    <h3>CPU</h3>
-                    <select id="cpu-select">
-                        <option value="">Select a CPU</option>
-                        <!-- CPU options will go here -->
-                    </select>
-                </div>
+        <!-- HTML Section for Part Selection -->
 
-                <!-- GPU Selection -->
-                <div class="part-category">
-                    <h3>GPU</h3>
-                    <select id="gpu-select">
-                        <option value="">Select a GPU</option>
-                        <!-- GPU options will go here -->
-                    </select>
-                </div>
+ <select id="cpu-select"></select>
+ <select id="gpu-select"></select>
+ <select id="ram-select"></select>
+ <select id="storage-select"></select>
+ <select id="cpu-cooler-select"></select>
+ <select id="motherboard-select"></select>
+ <select id="case-select"></select>
+ <select id="power-supply-select"></select> 
+ <select id="os-select">
+    <option value="">Select OS (Optional)</option>
+ </select>
 
-                <!-- RAM Selection -->
-                <div class="part-category">
-                    <h3>RAM</h3>
-                    <select id="ram-select">
-                        <option value="">Select RAM</option>
-                        <!-- RAM options will go here -->
-                    </select>
-                </div>
+ <button id="add-to-cart">Add to Cart</button>
 
-                <!-- Other part selections can be added similarly -->
-            </div>
+<!-- Cart Section -->
+<section id="cart">
+    <h2>Your Cart</h2>
+    <ul id="cart-list">
+        <!-- Cart items will be displayed here -->
+    </ul>
+    <p id="total-price">Total: $0</p>
+    <button id="checkout-button">Checkout</button>
+</section>
 
-            <button id="add-to-cart">Add to Cart</button>
-        </section>
     </main>
 
     <!-- Footer -->
